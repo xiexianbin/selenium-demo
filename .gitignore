@@ -1,0 +1,5 @@
+downloads/*
+*.pyc
+.DS_Store
+chromedriver
+.idea
