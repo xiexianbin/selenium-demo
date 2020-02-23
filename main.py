@@ -12,8 +12,11 @@ def download_mp3(index):
 
     options = webdriver.ChromeOptions()
     options.add_argument("--no-sandbox")
+    # options.add_argument("--headless")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--start-maximized")
     driver = webdriver.Chrome(
-        executable_path="/Users/xiexianbin/work/code/github/temp/python-xmly/chromedriver",
+        executable_path="./chromedriver",
         options=options)
     try:
         driver.get(url)
@@ -39,6 +42,6 @@ def download_mp3(index):
 
 
 if __name__ == '__main__':
-    start = 864
-    for i in range(36):
+    start = 500
+    for i in range(2):
         download_mp3(start+i)
